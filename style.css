@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: #161616;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container{
+    width: 100%;
+    background: url('hero.jpg');
+    padding: 70px 90px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #161616;
+}
+.container h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.container p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.searchBox{
+   max-width: 600px;
+   margin: 15px auto;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+.searchBox input{
+    padding: 12px;
+    width: 70%;
+    border-radius: 5px 0 0 5px;
+    outline: 0;
+    border: 1px solid rgb(228, 69, 69);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.searchBox input:focus {
+    border-color: rgb(240, 72, 72);
+    box-shadow: 0 0 8px rgba(240, 72, 72, 0.6);
+}
+
+.searchBox button{
+    padding: 12px 20px;
+    background: rgb(240, 72, 72);
+    border: 1px solid rgb(221, 59, 59);
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+
+}
+
+.searchBox button:first-of-type {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.searchBox button.random-btn {
+    margin-left: 8px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+
+.searchBox button:hover {
+    background: rgb(200, 50, 50);
+    transform: scale(1.05);
+}
+
+
+.notFound{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.recipes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+
+}
+
+.recipe-card{
+    width: 200px;
+    height: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img{
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.recipe-card button{
+    padding: 4px 10px;
+    background: rgb(91, 167, 91);
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    margin: 10px 0;
+}
+
+.popup-card{
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+z-index: 10;
+border: 2px solid red;
+display: none;
+overflow-y: auto; 
+display: none;
+opacity: 0;
+transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+.popup-card.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-card h3{
+    margin: 12px 0;
+    color: #333;
+    font-size: 22px;
+
+}
+.popup-card p{
+    margin: 12px 0;
+    color: #333;
+    font-size: 16px;
+    overflow-y: auto;
+    max-height: 200px;
+    padding-right: 10px;
+}
+
+.close-btn{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: rgb(235, 103, 103);
+    padding: 5px;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+font-weight: 600;
+cursor: pointer;
+}
+
+/* Favorites section */
+.favorites-section {
+    padding: 20px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.clear-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: rgb(200, 50, 50);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.clear-btn:hover {
+    background: rgb(170, 30, 30);
+}
+
+

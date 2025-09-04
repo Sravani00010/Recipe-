@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <title>Recipe App</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Recipe Ideas</h2>
+        <p>What's cooking today? Search here!!</p>
+        <div class="searchBox">
+            <input type="text" placeholder="Search for recipes" id="searchInput">
+            <button onclick="searchRecipes()">Search</button>
+            <!--Random recipe-->
+            <button class="random-btn" onclick="getRandomRecipe()">🎲 Random Recipe</button>
+        </div>
+    </div>
+
+    <div class="recipes" id="recipes"></div>
+    <div class="notFound" id="notFound">Search your Facourite recipes!</div>
+
+    <div class="popup-card" id="popupCard">
+        <button class="close-btn" onclick="closeRecipe()">Close</button>
+        <h3 id="recipeTitle"></h3>
+        <h4>Ingredients</h4>
+            <ul id="recipeIngredients"></ul>
+        <h4>Instructions</h4>
+        <p id="recipeDetails"></p>     
+        
+    </div>
+    <!--Favorite section-->
+    <div class="favorites-section">
+        <h2>My Favorites</h2>
+        <div class="recipes" id="favorites"></div>
+        <button class="clear-btn" onclick="clearFavorites()">&#128465; Clear All Favorites</button> 
+    </div>
+
+         <script src="script.js"></script>
+</body>
+</html>
